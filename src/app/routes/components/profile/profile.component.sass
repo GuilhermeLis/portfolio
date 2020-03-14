@@ -1,28 +1,37 @@
+@use '../../shared/default' as *
+
 .container
   display: flex
+  margin: auto
   height: 100%
-  width: 100%
-  background-color: #344c5e
+  // width: 100%
+  background-color: $BackgroudColor
 
 .card
-  max-width: 300px
+  max-width: 100%
   text-align: center
   margin: auto
+  // background-color: blue
   img
     border-radius: 50%
     max-width: 200px
     max-height: 200px
     margin: auto
   h4
-    color: #a4a8ab
+    color: $TextColor
   p
     text-align: justify
     margin-left: 25px
     margin-right: 25px
-    color: #a4a8ab
+    color: $TextColor
 .icon-container
-  display: inline
-  justify-content: space-between
-  background-color: white
-  a
-    size: 900px
+  display: flex
+  // background-color: white
+  div
+    margin: auto
+    a
+      padding: 4px
+      color: $LinkColor
+      &:hover
+        color: $LinkHouver
+
