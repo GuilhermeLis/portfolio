@@ -6,6 +6,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 
 
@@ -19,7 +23,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatGridListModule,
+    MatButtonModule
   ],
   exports: [
     MatMenuModule,
@@ -27,7 +33,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatGridListModule,
+    MatButtonModule
   ]
 })
 export class SharedModule { }

@@ -1,8 +1,14 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav mode="side" opened>
+  <mat-sidenav #sidenav mode="side" opened>
     <app-profile></app-profile>
   </mat-sidenav>
   <mat-sidenav-content>
+    <button mat-icon-button
+      (click)="toggle()"
+      class = "menu"
+      *ngIf="showOff">
+        <mat-icon class="mat-18">menu</mat-icon>
+    </button>
     <app-home></app-home>
   </mat-sidenav-content>
 </mat-sidenav-container>
