@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   windows: any;
 
-  constructor() { }
+  constructor(private breakPoint: BreakpointObserver) { }
 
   ngOnInit(): void {
     // console.log(window.innerWidth);

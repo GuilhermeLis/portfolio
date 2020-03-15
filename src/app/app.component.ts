@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Observable, fromEvent } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-root',
@@ -15,19 +17,28 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    fromEvent(window, 'resize')
-    .pipe(
-      tap(
-        event => {
-          // tslint:disable-next-line: no-string-literal
-          const size = event.currentTarget['innerWidth'];
-          if (size < 935) { this.close(); this.showOff = true;
-          } else { this.open(); this.showOff = false; }
-        }
-      ) ).subscribe();
+    console.log(window.innerWidth);
+
+    // if (window.innerWidth < 935) { this.changeButton('show'); } else {this.changeButton('hide'); }
+
+    // fromEvent(window, 'resize')
+    // .pipe(
+    //   tap(
+    //     event => {
+    //       // tslint:disable-next-line: no-string-literal
+    //       const size = event.currentTarget['innerWidth'];
+    //       if (size < 935) { this.changeButton('show');
+    //       } else { this.changeButton('hide'); }
+    //     }
+    //   ) ).subscribe();
   }
 
   ngOnDestroy() {
+  }
+
+  changeButton(name: string) {
+    if (name === 'show') { this.showOff = true; this.close(); }
+    if (name === 'hide') { this.showOff = false; this.open(); }
   }
 
   open() {

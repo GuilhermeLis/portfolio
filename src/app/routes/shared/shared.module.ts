@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -25,7 +26,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     FontAwesomeModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    LayoutModule
   ],
   exports: [
     MatMenuModule,
@@ -35,7 +37,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     FontAwesomeModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    LayoutModule
   ]
 })
 export class SharedModule { }
