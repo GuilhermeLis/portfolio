@@ -1,13 +1,20 @@
 @use '/routes/shared/default' as *
+mat-toolbar
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 10
+  shadow-box: 0 2px 5px 0 rgba(0,0,0,.3)
+  background-color: #454545
+  color: #FFFFFF
 .container
   // display: grid
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  background: #eee
-  min-width: 280
+  display: flex
+  justify-content: flex-end
+  >div
+    >a
+      color: #FFFFFF
   mat-sidenav
     display: auto
     max-width: 300px
@@ -17,4 +24,3 @@
 .menu
   position: fixed
   // background-color: $BackgroudColor
-

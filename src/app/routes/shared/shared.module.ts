@@ -9,14 +9,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-
-
-
-
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent,
+    FooterComponent
+  ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -27,7 +29,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     FontAwesomeModule,
     MatGridListModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MatToolbarModule,
   ],
   exports: [
     MatMenuModule,
@@ -38,7 +41,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     FontAwesomeModule,
     MatGridListModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MatToolbarModule,
+    HeaderComponent,
+    FooterComponent,
   ]
 })
 export class SharedModule { }

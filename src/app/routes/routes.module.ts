@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesModule } from './pages/pages.module';
-import { ComponentsModule } from './components/components.module'
+
 
 
 
@@ -11,8 +11,9 @@ import { ComponentsModule } from './components/components.module'
   imports: [
     CommonModule,
     PagesModule,
-    ComponentsModule
   ],
-  exports: [PagesModule, ComponentsModule]
+  exports: [
+    PagesModule,
+  ]
 })
 export class RoutesModule { }
