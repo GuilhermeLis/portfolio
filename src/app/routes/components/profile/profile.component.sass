@@ -1,0 +1,34 @@
+@use '../../shared/default' as *
+
+.container
+  display: flex
+  margin: auto
+  height: 100%
+  background-color: $BackgroudColor
+
+.card
+  max-width: 100%
+  text-align: center
+  margin: auto
+  img
+    border-radius: 50%
+    max-width: 200px
+    max-height: 200px
+    margin: auto
+  h4
+    color: $TextColor
+  p
+    text-align: justify
+    margin-left: 25px
+    margin-right: 25px
+    color: $TextColor
+.icon-container
+  display: flex
+  div
+    margin: auto
+    a
+      padding: 4px
+      color: $LinkColor
+      &:hover
+        color: $LinkHouver
+
